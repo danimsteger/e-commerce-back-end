@@ -15,6 +15,7 @@ router.get("/", async (req, res) => {
       ],
     });
     res.status(200).json(productData);
+    console.log(productData);
   } catch (err) {
     res.status(500).json(err);
     console.error(err);
@@ -38,6 +39,7 @@ router.get("/:id", async (req, res) => {
       res.status(404).json({ message: "No prouduct found with that id!" });
     }
     res.status(200).json(productData);
+    console.log(productData);
   } catch (err) {
     res.status(500).json(err);
   }
